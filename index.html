@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONT AWESOME CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tours Page</title>
+  </head>
+  <body>
+    <header id="home">
+      <nav class="nav">
+        <div class="nav-wrapper">
+          <div class="nav-header">
+            <div>
+              <h2 class="logo">odigo</h2>
+            </div>
+            <button class="btn btn-menu">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+          <!-- Links -->
+          <ul class="ul-wrapper">
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">Sign in</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- tour header descriptions -->
+      <div class="header-desc-wrapper">
+        <h2 class="header-title">Discover Amazing places in Japan</h2>
+        <p class="header-desc">
+          Jump off balcony, onto stranger's head. Chase ball of string hide when
+          guests come over. Being gorgeous with belly side up i could pee on
+          this if i had the energy but under the bed, for attack the child, open
+          the door,
+        </p>
+        <!-- header form -->
+        <form>
+          <div>
+            <label for="like-to-do"
+              ><span class="cirle"></span
+              ><span class="f-label-text"
+                >What would you like to do?</span
+              ></label
+            >
+            <input type="text" autocomplete="off" id="like-to-do" />
+          </div>
+          <div>
+            <label for="like-to-go"
+              ><span class="cirle"></span
+              ><span class="f-label-text"
+                >Where would you like to go?</span
+              ></label
+            >
+            <input type="text" autocomplete="off" id="like-to-go" />
+          </div>
+          <button type="submit" class="submit-form">SEARCH</button>
+        </form>
+      </div>
+    </header>
+    <!-- header overley -->
+    <section class="overley-wrapper">
+      <div class="overley">
+        <h2>Benefits of Odigo</h2>
+
+        <!-- benefits of odigo -->
+        <div class="benefits-wraper">
+          <article class="benefit">
+            <div class="benefit-svg">
+              <img src="svg/plateIcon.svg" alt="plate" />
+            </div>
+            <h4>Welcome to Odigo!</h4>
+            <p>
+              Jump off balcony, onto stranger's head. Chase ball of string hide
+              when guests come over.
+            </p>
+            <li class="learn-more">
+              <a href="#">LEARN MORE</a>
+              <i class="fa-solid fa-right-long"></i>
+            </li>
+          </article>
+          <article class="benefit">
+            <div class="benefit-svg">
+              <img src="svg/personIcon.svg" alt="plate" />
+            </div>
+            <h4>Your Personal Japan Guide</h4>
+            <p>
+              Jump off balcony, onto stranger's head. Chase ball of string hide
+              when guests come over.
+            </p>
+            <li class="learn-more">
+              <a href="#">LEARN MORE</a>
+              <i class="fa-solid fa-right-long"></i>
+            </li>
+          </article>
+          <article class="benefit">
+            <div class="benefit-svg">
+              <img src="svg/houseIcon.svg" alt="plate" />
+            </div>
+            <h4>Promoting Local Businesses</h4>
+            <p>
+              Jump off balcony, onto stranger's head. Chase ball of string hide
+              when guests come over.
+            </p>
+            <li class="learn-more">
+              <a href="#">LEARN MORE</a>
+              <i class="fa-solid fa-right-long"></i>
+            </li>
+          </article>
+        </div>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>

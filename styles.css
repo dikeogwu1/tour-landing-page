@@ -1,0 +1,499 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@500&display=swap');
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: #1b7dff;
+  --clr-primary-2: #102746;
+  /* light shades of primary colors */
+  --clr-primary-3: #006dfe;
+  /* black used for paragraphs */
+  --clr-black: #000;
+  --clr-white: #fff;
+  --ff-primary: 'Lato', sans-serif;
+  --ff-secondary: 'Open Sans', sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-primary);
+  background: var(--clr-white);
+  color: var(--clr-white);
+  line-height: 1.5;
+  font-size: 0.875rem;
+  position: relative;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img:not(.logo) {
+  width: 100%;
+}
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-black);
+}
+
+/*  global classes */
+
+.btn {
+  display: inline-block;
+  background: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+/* 
+=============
+SINGLE STYLES
+=============
+*/
+
+/* nav */
+header {
+  height: 61.8125rem;
+  width: 100%;
+  background-image: url('https://res.cloudinary.com/dikeogwu1/image/upload/v1645106647/tours%20image/headerBackround_qzuyit.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+header::after {
+  content: '';
+  background: linear-gradient(
+    180deg,
+    rgba(53, 66, 103, 0.0001) 0%,
+    #151824 95.04%
+  );
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.nav-wrapper {
+  background: transparent;
+  transition: var(--transition);
+  padding: 1rem;
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--clr-white);
+  padding: 0.5rem 1rem;
+  box-shadow: 0px 3px 3px var(--clr-grey-6);
+  z-index: 6;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-header .logo,
+.nav-header .btn {
+  width: fit-content;
+}
+
+.logo {
+  color: var(--clr-white);
+  font-weight: 900;
+  letter-spacing: 0;
+  font-family: 'Righteous', cursive;
+}
+
+/* links */
+
+.ul-wrapper {
+  position: relative;
+  z-index: 2;
+  height: 0px;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.show-links {
+  height: 170px;
+}
+
+.ul-wrapper li {
+  letter-spacing: 0.1rem;
+}
+
+.ul-wrapper li a {
+  color: var(--clr-white);
+  font-size: 1.125rem;
+  font-weight: 300;
+  transition: var(--transition);
+  padding: 0.5rem 0;
+  display: block;
+}
+
+.ul-wrapper li a:hover {
+  color: var(--clr-white);
+  background: var(--clr-primary-1);
+  padding-left: 1rem;
+}
+.btn-menu {
+  color: var(--clr-white);
+  font-size: 1.5rem;
+  height: fit-content;
+  padding: 0.25rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* tour header descriptions */
+.header-desc-wrapper {
+  position: relative;
+  z-index: 2;
+  margin: 0 1rem;
+}
+.header-title {
+  font-weight: 500;
+  margin-top: 4rem;
+  font-size: 3.1rem;
+  font-weight: 500;
+  opacity: 0.9;
+  line-height: 3.75rem;
+  color: var(--clr-white);
+}
+.header-desc {
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  opacity: 0.7;
+  margin-bottom: 2.375rem;
+  color: var(--clr-white);
+}
+
+/* header form */
+form div:first-child {
+  margin-bottom: 1.5rem;
+}
+label {
+  display: flex;
+  justify-content: center;
+}
+.cirle {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  opacity: 0.7;
+  background: transparent;
+  border-radius: 50%;
+  border: 2px solid var(--clr-white);
+}
+.f-label-text {
+  font-weight: 500;
+  font-size: 1.125rem;
+  margin-left: 1.4375rem;
+  opacity: 0.7;
+}
+input {
+  display: block;
+  background: transparent;
+  width: 100%;
+  height: 1.25rem;
+  border-top: none;
+  border-left: none;
+  font-size: 1.1rem;
+  border-right: none;
+  border-bottom: 2px solid var(--clr-white);
+  transition: var(--transition);
+}
+input:focus {
+  outline: none;
+  background-color: #ffffff8a;
+  padding: 1rem;
+  font-size: 1.25rem;
+}
+.submit-form {
+  background-color: var(--clr-primary-1);
+  border: none;
+  color: var(--clr-white);
+  width: 10.6875rem;
+  height: 3.625rem;
+  font-size: 1.5rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  transition: var(--transition);
+}
+.submit-form:hover {
+  color: var(--clr-primary-1);
+  background-color: var(--clr-white);
+}
+
+/* header overley */
+.overley-wrapper {
+  position: relative;
+  height: 40.9375rem;
+}
+.overley {
+  position: absolute;
+  background: var(--clr-white);
+  width: 92vw;
+  margin: 0 auto;
+  top: -130px;
+  left: 0;
+  right: 0;
+  color: var(--clr-black);
+}
+.overley h2 {
+  color: var(--clr-primary-2);
+  font-weight: 500;
+  font-size: 2.1875rem;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+}
+/* benefits of odigo */
+.benefits-wraper {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4.5rem;
+  text-align: center;
+}
+.benefit {
+  margin: 2.5rem 0;
+}
+.benefit-svg {
+  width: 4.125rem;
+  height: 4.125rem;
+  margin: 0 auto;
+}
+.benefit h4 {
+  color: var(--clr-black);
+  font-weight: 500;
+  font-size: 1.125rem;
+  margin-top: 2.25rem;
+  margin-bottom: 1.625rem;
+}
+.benefit p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+.learn-more a {
+  color: var(--clr-primary-3);
+}
+.fa-right-long {
+  color: var(--clr-primary-3);
+  margin-left: 1.625rem;
+  font-size: 1.25rem;
+}
+@media screen and (min-width: 290px) {
+  /* header overley */
+  /* benefits of odigo */
+  .benefit p {
+    width: 19.8125rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* header form */
+  form {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 900px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+
+  /* single stles */
+
+  .btn-menu {
+    display: none;
+  }
+
+  /* nav */
+  .nav {
+    margin: 4.25rem 9.25rem 0 9.25rem;
+  }
+  .nav-wrapper {
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+  /* links */
+  .ul-wrapper {
+    width: 46%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    height: auto !important;
+    overflow: visible;
+  }
+  .ul-wrapper li {
+    margin-bottom: 0;
+  }
+  .ul-wrapper li a {
+    padding: 0 1rem;
+  }
+  .ul-wrapper li a:hover {
+    color: #13e;
+    background: transparent;
+  }
+
+  /* tour header descriptions */
+  .header-desc-wrapper {
+    margin: 10.3125rem 9.25rem 0 9.25rem;
+  }
+  .header-title {
+    width: 39.0625rem;
+    height: 7.5625rem;
+    margin-top: 0;
+  }
+  .header-desc {
+    width: 34.125rem;
+    height: 4.5rem;
+    margin-bottom: 3.375rem;
+  }
+  /* header form */
+  form {
+    display: flex;
+    align-items: flex-end;
+    width: 85%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  /* header form */
+  form div:first-child {
+    margin-bottom: 0;
+  }
+  label {
+    justify-content: left;
+  }
+  input {
+    width: 18.5rem;
+  }
+  .submit-form {
+    display: inline;
+    margin: 0;
+    margin-top: 1.5rem;
+  }
+  /* header overley */
+  .overley {
+    width: 88vw;
+    top: -230px;
+    height: 40.9375rem;
+  }
+  .overley h2 {
+    margin-top: 5.8125rem;
+    margin-left: 5.8125rem;
+    margin-right: 0;
+  }
+  /* benefits of odigo */
+  .benefits-wraper {
+    margin-left: 5.8125rem;
+    margin-right: 2rem;
+    margin-top: 7.5rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 88%;
+  }
+  .benefit-svg {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* header overley */
+  /* benefits of odigo */
+  .benefit {
+    margin: 0;
+  }
+  /* header form */
+  form {
+    margin: 0;
+  }
+  .submit-form {
+    margin-top: 0;
+  }
+}
