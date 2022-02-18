@@ -442,7 +442,76 @@ MORE PLACE FOR YOUR NEXT TRIP SECTION
 TODAY TOP PLACES TO VISIT SECTION
 =================================
 */
+.today-top-place-container {
+  width: 92vw;
+  margin: 0 auto;
+  margin-top: 6rem;
+}
+.today-top-place-container h3 {
+  color: var(--clr-primary-2);
+  font-weight: 500;
+  font-size: 2.1875rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.today-top-place-container h3::after {
+  content: '';
+  width: 15.75rem;
+  height: 2px;
+  background: var(--clr-primary-3);
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+}
+.today-top-place-wrapper {
+  display: grid;
+  gap: 3.3125rem;
+}
+.ttp-img-box {
+  position: relative;
+  height: 22rem;
+}
+.ttp-img-footer {
+  width: 100%;
+  height: 3.4375rem;
+  background: rgba(21, 24, 36, 0.6);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  font-weight: 500;
+}
+.ttp-img-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fa-heart {
+  margin-left: 0.25rem;
+  margin-right: 0.875rem;
+}
+.fa-comment-alt {
+  margin-left: 0.25rem;
+}
+.ttp-text-box p {
+  color: var(--clr-primary-2);
+  margin-top: 2.8125rem;
+  margin-bottom: 1.9375rem;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+.see-more {
+  background: var(--clr-primary-3);
+  color: var(--clr-white);
+  border: none;
+  padding: 0.75rem 1.1rem;
+}
 
+/* 
+==================
+TOUR VIDEO SECTION
+==================
+*/
 @media screen and (min-width: 290px) {
   /* benefits of odigo */
   .benefit p {
@@ -505,6 +574,15 @@ MORE PLACE FOR YOUR NEXT TRIP SECTION
   }
   .more-place-text {
     order: 1;
+  }
+
+  /* 
+=================================
+TODAY TOP PLACES TO VISIT SECTION
+=================================
+*/
+  .today-top-place-wrapper {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (min-width: 900px) {
@@ -678,5 +756,24 @@ MORE PLACE FOR YOUR NEXT TRIP SECTION
   .more-place-container {
     width: 86vw;
     margin-top: 9.25rem;
+  }
+
+  /* 
+=================================
+TODAY TOP PLACES TO VISIT SECTION
+=================================
+*/
+  .today-top-place-container {
+    width: 86vw;
+    margin-top: 7.6875rem;
+  }
+
+  /* 
+=================================
+TODAY TOP PLACES TO VISIT SECTION
+=================================
+*/
+  .today-top-place-wrapper {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
